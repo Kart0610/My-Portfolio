@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Java Developer | Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'system-ui', 'sans-serif'],
+                        display: ['Clash Display', 'Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            DEFAULT: '#06b6d4',
+                            dark: '#0891b2',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
+    
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo / Name -->
+                <a href="#home" class="text-xl font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+                    &lt;Portfolio /&gt;
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About</a>
+                    <a href="#projects" class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</a>
+                    <a href="#education" class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Education</a>
+                    <a href="#contact" class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+                    
+                    <!-- Dark/Light Mode Toggle -->
+                    <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-2">
+                    <button id="theme-toggle-mobile" aria-label="Toggle dark mode" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
+                        <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-btn" aria-label="Toggle menu" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 md:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-800">
+            <div class="px-4 py-4 space-y-2">
+                <a href="#home" class="mobile-nav-link block py-2 text-gray-600 dark:text-gray-300">Home</a>
+                <a href="#about" class="mobile-nav-link block py-2 text-gray-600 dark:text-gray-300">About</a>
+                <a href="#projects" class="mobile-nav-link block py-2 text-gray-600 dark:text-gray-300">Projects</a>
+                <a href="#skills" class="mobile-nav-link block py-2 text-gray-600 dark:text-gray-300">Skills</a>
+                <a href="#education" class="mobile-nav-link block py-2 text-gray-600 dark:text-gray-300">Education</a>
+                <a href="#contact" class="mobile-nav-link block py-2 text-gray-600 dark:text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HOME SECTION ==================== -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-br from-gray-50 via-primary-50/30 to-gray-100 dark:from-gray-900 dark:via-gray-900 dark:to-primary-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center animate-fade-in">
+                <p class="text-primary-600 dark:text-primary-400 font-medium mb-4 text-lg animate-slide-up" style="animation-delay: 0.1s;">Hello, I'm</p>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 animate-slide-up" style="animation-delay: 0.2s;">
+                    <span class="text-primary-600 dark:text-primary-400">Karthika</span>
+                </h1>
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6 animate-slide-up" style="animation-delay: 0.3s;">
+                    Full Stack Java Developer
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 animate-slide-up" style="animation-delay: 0.4s;">
+                    Building scalable web applications with Java, Spring Boot, and modern frontend technologies. 
+                    Passionate about clean code and user-centric design.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay: 0.5s;">
+                    <a href="#projects" class="btn-primary px-8 py-3 rounded-lg font-semibold text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn-secondary px-8 py-3 rounded-lg font-semibold border-2 border-primary-600 dark:border-primary-400 text-primary-600 dark:text-primary-400 hover:bg-primary-600 dark:hover:bg-primary-500 hover:text-white transition-all duration-300">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">About Me</h2>
+            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">Get to know me better</p>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="about-content space-y-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                    <p>
+                        I am a <strong class="text-gray-800 dark:text-gray-100">Full Stack Java Developer</strong> with a deliberate transition from Chemistry to software development. I completed my <strong class="text-gray-800 dark:text-gray-100">B.Sc in Chemistry</strong> from SDNB Vaishnav College for Women, Chennai in 2024. After graduation, driven by a passion for building web applications and solving real-world problems, I transitioned into technology and completed the <strong class="text-gray-800 dark:text-gray-100">Full Stack Java Development course at GUVI</strong> (IIT-Madras incubated EdTech platform) in 2025. My chemistry background sharpened my <strong class="text-gray-800 dark:text-gray-100">analytical thinking and problem-solving skills</strong>&mdash;qualities I now apply to designing robust, scalable web applications.
+                    </p>
+                    <p>
+                        During the course, I gained hands-on experience in <strong class="text-gray-800 dark:text-gray-100">Java, Spring Boot, HTML, CSS, JavaScript, Tailwind CSS, MySQL, PostgreSQL, Git, and REST APIs</strong>. I built real-world projects including a <strong class="text-gray-800 dark:text-gray-100">Movie Ticket Booking System</strong>, <strong class="text-gray-800 dark:text-gray-100">Real Estate Listing Platform</strong>, and <strong class="text-gray-800 dark:text-gray-100">Smart-Spend Expense Tracker</strong>&mdash;each demonstrating my ability to deliver end-to-end solutions from concept to deployment.
+                    </p>
+                    <p>
+                        I am passionate about building web applications that make a difference. My structured, analytical approach helps me break down complex requirements and write clean, maintainable code. I am confident in my ability to contribute to a team, learn quickly, and deliver quality software. I am eager to bring my technical skills and problem-solving mindset to a growth-oriented organization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Projects</h2>
+            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">Things I've built</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Movie Ticket Booking System -->
+                <article class="project-card group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-primary-500 to-primary-700 dark:from-primary-600 dark:to-primary-800 flex items-center justify-center">
+                        <span class="text-6xl">🎬</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Movie Ticket Booking System</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            A full-stack web application for booking movie tickets online. Users can browse movies, select showtimes, 
+                            choose seats, and complete payments. Includes admin panel for managing movies and screenings.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">Java</span>
+                            <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">Spring Boot</span>
+                            <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">MySQL</span>
+                            <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">React</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/Kart0610/movieticket" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                            <a href="https://movieticket-1-lzqj.onrender.com/" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Real Estate Listing Platform -->
+                <article class="project-card group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-emerald-500 to-emerald-700 dark:from-emerald-600 dark:to-emerald-800 flex items-center justify-center">
+                        <span class="text-6xl">🏠</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Real Estate Listing Platform</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            A comprehensive platform for listing and searching real estate properties. Features include property search with filters, 
+                            image galleries, agent profiles, and inquiry management. Built with RESTful API architecture.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full">Java</span>
+                            <span class="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full">Spring Boot</span>
+                            <span class="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full">PostgreSQL</span>
+                            <span class="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full">Tailwind CSS</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/Kart0610/realnest" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                            <a href="https://realestate-project-9l6u.onrender.com/" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Smart-Spend Expense Tracker -->
+                <article class="project-card group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-amber-500 to-amber-700 dark:from-amber-600 dark:to-amber-800 flex items-center justify-center">
+                        <span class="text-6xl">💰</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Smart-Spend Expense Tracker</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            An intuitive expense tracking application that helps users manage their finances. Features include 
+                            categorized spending, budget limits, visual analytics with charts, and export functionality for reports.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-sm bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full">Java</span>
+                            <span class="px-3 py-1 text-sm bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full">Spring Boot</span>
+                            <span class="px-3 py-1 text-sm bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full">MySQL</span>
+                            <span class="px-3 py-1 text-sm bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/Kart0610/smartspenddb" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                            <a href="https://smartspenddb-4.onrender.com/" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="py-20 bg-white dark:bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Skills</h2>
+            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">Technologies I work with</p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">☕</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">Java</span>
+                </div>
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">🍃</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">Spring Boot</span>
+                </div>
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">📄</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">HTML</span>
+                </div>
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">🎨</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">CSS</span>
+                </div>
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">⚡</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">JavaScript</span>
+                </div>
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">🌊</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">Tailwind CSS</span>
+                </div>
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">🐬</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">MySQL</span>
+                </div>
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">🐘</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">PostgreSQL</span>
+                </div>
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">📦</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">Git</span>
+                </div>
+                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
+                    <span class="text-4xl mb-2">⚛️</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">REST APIs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section id="education" class="py-20 bg-gray-50 dark:bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Education</h2>
+            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">Academic background</p>
+            
+            <div class="max-w-2xl mx-auto space-y-6">
+                <div class="education-card bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-16 h-16 bg-primary-100 dark:bg-primary-900/50 rounded-lg flex items-center justify-center">
+                            <span class="text-3xl">🎓</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Full Stack Java Development Course</h3>
+                            <p class="text-primary-600 dark:text-primary-400 font-semibold mb-1">GUVI (IIT-Madras incubated EdTech platform)</p>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                Completed in 2025 with a strong focus on Java, Spring Boot, HTML, CSS, JavaScript, Tailwind CSS, MySQL, PostgreSQL, Git, REST APIs, and full stack web development.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-400 mt-2">
+                                Built real-world projects including a Movie Ticket Booking System, Real Estate Listing Platform, and Smart-Spend Expense Tracker.
+                            </p>
+                            <p class="text-gray-500 dark:text-gray-500 mt-2">Year of Completion: 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-card bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-16 h-16 bg-primary-100 dark:bg-primary-900/50 rounded-lg flex items-center justify-center">
+                            <span class="text-3xl">🎓</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Bachelor of Science in Chemistry</h3>
+                            <p class="text-primary-600 dark:text-primary-400 font-semibold mb-1">SDNB Vaishnav College for Women, Chennai</p>
+                            <p class="text-gray-600 dark:text-gray-400">B.Sc Chemistry</p>
+                            <p class="text-gray-500 dark:text-gray-500 mt-2">Year of Graduation: 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Contact</h2>
+            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">Get in touch with me</p>
+            
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                        <span class="text-2xl">📧</span>
+                        <div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                            <a href="mailto:karthikat0610@gmail.com" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">karthikat0610@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                        <span class="text-2xl">📱</span>
+                        <div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Phone</p>
+                            <a href="tel:+916382118039" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">+916382118039</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                        <span class="text-2xl">💼</span>
+                        <div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/karthika-dinesh-247a76344" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">https://www.linkedin.com/in/karthika-dinesh-247a76344</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                        <span class="text-2xl">🐙</span>
+                        <div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">GitHub</p>
+                            <a href="https://github.com/Kart0610/" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">https://github.com/Kart0610/</a>
+                            
+                    </div>
+                    <a href="assets/resume.pdf" download class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white font-semibold rounded-lg transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        Download Resume
+                    </a>
+                </div>
+                </div>
+                <!-- Contact Form -->
+                <form id="contact-form" class="space-y-6 bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="your@email.com">
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="Subject">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition resize-none" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white font-semibold rounded-lg transition-colors hover:shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 dark:bg-black text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-center md:text-left">© <span id="current-year"></span> Your Name. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors" aria-label="GitHub">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors" aria-label="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="hover:text-primary-400 transition-colors" aria-label="Email">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

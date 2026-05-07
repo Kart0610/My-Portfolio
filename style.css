@@ -1,0 +1,160 @@
+/**
+ * Portfolio Website - Custom Styles
+ * Full Stack Java Developer Portfolio
+ * 
+ * This file contains custom CSS for animations, scroll effects,
+ * and enhancements beyond Tailwind's utility classes.
+ */
+
+/* ==================== BASE & SMOOTH SCROLL ==================== */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ==================== SECTION ANIMATIONS ==================== */
+/* Sections start invisible and animate in when they enter viewport */
+.section-title,
+.section-subtitle,
+.about-content,
+.project-card,
+.skill-card,
+.education-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When element is visible in viewport */
+.section-title.animate-in,
+.section-subtitle.animate-in,
+.about-content.animate-in,
+.project-card.animate-in,
+.skill-card.animate-in,
+.education-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animation delays for project cards */
+.project-card.animate-in:nth-child(1) { transition-delay: 0.1s; }
+.project-card.animate-in:nth-child(2) { transition-delay: 0.2s; }
+.project-card.animate-in:nth-child(3) { transition-delay: 0.3s; }
+
+/* Stagger animation delays for skill cards */
+.skill-card.animate-in:nth-child(1) { transition-delay: 0.05s; }
+.skill-card.animate-in:nth-child(2) { transition-delay: 0.1s; }
+.skill-card.animate-in:nth-child(3) { transition-delay: 0.15s; }
+.skill-card.animate-in:nth-child(4) { transition-delay: 0.2s; }
+.skill-card.animate-in:nth-child(5) { transition-delay: 0.25s; }
+.skill-card.animate-in:nth-child(6) { transition-delay: 0.3s; }
+.skill-card.animate-in:nth-child(7) { transition-delay: 0.35s; }
+.skill-card.animate-in:nth-child(8) { transition-delay: 0.4s; }
+.skill-card.animate-in:nth-child(9) { transition-delay: 0.45s; }
+.skill-card.animate-in:nth-child(10) { transition-delay: 0.5s; }
+
+/* ==================== NAVBAR SCROLL EFFECT ==================== */
+/* Navbar gets subtle shadow when scrolled */
+nav.scrolled {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dark nav.scrolled {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Active nav link styling */
+.nav-link.active {
+  color: rgb(14 165 233); /* primary-500 */
+  font-weight: 600;
+}
+
+.dark .nav-link.active {
+  color: rgb(56 189 248); /* primary-400 */
+}
+
+/* ==================== BUTTON HOVER EFFECTS ==================== */
+.btn-primary {
+  transform: translateY(0);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* ==================== PROJECT CARD ENHANCEMENTS ==================== */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gradient overlay on project card images on hover */
+.project-card .h-48 {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .h-48 {
+  transform: scale(1.05);
+}
+
+/* ==================== FORM FOCUS STATES ==================== */
+#contact-form input:focus,
+#contact-form textarea:focus {
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.25);
+}
+
+.dark #contact-form input:focus,
+.dark #contact-form textarea:focus {
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+/* ==================== MOBILE MENU ANIMATION ==================== */
+#mobile-menu {
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#mobile-menu:not(.hidden) {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 300px;
+  }
+}
+
+/* ==================== REDUCED MOTION PREFERENCE ==================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .section-title,
+  .section-subtitle,
+  .about-content,
+  .project-card,
+  .skill-card,
+  .education-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .project-card:hover .h-48 {
+    transform: none;
+  }
+}
