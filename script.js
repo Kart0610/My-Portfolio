@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ==================== SCROLL ANIMATIONS (Intersection Observer) ====================
   const animatedElements = document.querySelectorAll(
-    '.section-title, .section-subtitle, .about-content, .project-card, .skill-card, .education-card'
+    '.section-title, .section-subtitle, .about-content, .project-card, .skill-card, .skill-category-card, .training-card, .cert-carousel, .cert-card, .stat-card, .education-card'
   );
 
   const observerOptions = {
@@ -129,6 +129,94 @@ document.addEventListener('DOMContentLoaded', () => {
   }, observerOptions);
 
   animatedElements.forEach((el) => observer.observe(el));
+
+  // ==================== CERTIFICATIONS CAROUSEL ====================
+  const certTrack = document.getElementById('cert-track');
+  const certNavButtons = document.querySelectorAll('[data-cert-nav]');
+
+  function getCertScrollAmount() {
+    if (!certTrack) return 0;
+    const firstCard = certTrack.querySelector('.cert-card');
+    if (!firstCard) return 320;
+    const cardWidth = firstCard.getBoundingClientRect().width;
+    return Math.max(260, Math.round(cardWidth + 16));
+  }
+
+  function scrollCert(direction) {
+    if (!certTrack) return;
+    const amount = getCertScrollAmount();
+    certTrack.scrollBy({ left: direction * amount, behavior: 'smooth' });
+  }
+
+  certNavButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const dir = btn.getAttribute('data-cert-nav') === 'next' ? 1 : -1;
+      scrollCert(dir);
+    });
+  });
+
+  let certAutoTimer = null;
+  function startCertAutoSlide() {
+    if (!certTrack) return;
+    stopCertAutoSlide();
+    certAutoTimer = window.setInterval(() => {
+      const maxScrollLeft = certTrack.scrollWidth - certTrack.clientWidth;
+      const atEnd = certTrack.scrollLeft >= maxScrollLeft - 5;
+      if (atEnd) {
+        certTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        scrollCert(1);
+      }
+    }, 4200);
+  }
+
+  function stopCertAutoSlide() {
+    if (certAutoTimer) {
+      window.clearInterval(certAutoTimer);
+      certAutoTimer = null;
+    }
+  }
+
+  certTrack?.addEventListener('mouseenter', stopCertAutoSlide);
+  certTrack?.addEventListener('mouseleave', startCertAutoSlide);
+  certTrack?.addEventListener('focusin', stopCertAutoSlide);
+  certTrack?.addEventListener('focusout', startCertAutoSlide);
+
+  startCertAutoSlide();
+
+  // ==================== ACHIEVEMENTS COUNTERS ====================
+  const counters = document.querySelectorAll('.counter[data-target]');
+  const countersObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+        const target = Number(el.getAttribute('data-target') || '0');
+        if (!Number.isFinite(target) || target <= 0) return;
+        if (el.getAttribute('data-animated') === 'true') return;
+
+        el.setAttribute('data-animated', 'true');
+
+        const durationMs = 900;
+        const start = performance.now();
+        const startValue = 0;
+
+        function tick(now) {
+          const t = Math.min(1, (now - start) / durationMs);
+          const eased = 1 - Math.pow(1 - t, 3);
+          const value = Math.round(startValue + (target - startValue) * eased);
+          el.textContent = String(value);
+          if (t < 1) requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  counters.forEach((c) => countersObserver.observe(c));
 
   // ==================== CONTACT FORM HANDLING ====================
   const contactForm = document.getElementById('contact-form');

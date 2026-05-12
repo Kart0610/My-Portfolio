@@ -127,25 +127,66 @@
     <!-- ==================== HOME SECTION ==================== -->
     <section id="home" class="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-br from-gray-50 via-primary-50/30 to-gray-100 dark:from-gray-900 dark:via-gray-900 dark:to-primary-900/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="text-center animate-fade-in">
-                <p class="text-primary-600 dark:text-primary-400 font-medium mb-4 text-lg animate-slide-up" style="animation-delay: 0.1s;">Hello, I'm</p>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 animate-slide-up" style="animation-delay: 0.2s;">
-                    <span class="text-primary-600 dark:text-primary-400">Karthika</span>
-                </h1>
-                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6 animate-slide-up" style="animation-delay: 0.3s;">
-                    Full Stack Java Developer
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 animate-slide-up" style="animation-delay: 0.4s;">
-                    Building scalable web applications with Java, Spring Boot, and modern frontend technologies. 
-                    Passionate about clean code and user-centric design.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay: 0.5s;">
-                    <a href="#projects" class="btn-primary px-8 py-3 rounded-lg font-semibold text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
-                        View Projects
-                    </a>
-                    <a href="#contact" class="btn-secondary px-8 py-3 rounded-lg font-semibold border-2 border-primary-600 dark:border-primary-400 text-primary-600 dark:text-primary-400 hover:bg-primary-600 dark:hover:bg-primary-500 hover:text-white transition-all duration-300">
-                        Contact Me
-                    </a>
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center animate-fade-in">
+                <!-- Text -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <p class="text-primary-600 dark:text-primary-400 font-medium mb-3 text-lg animate-slide-up" style="animation-delay: 0.05s;">Hello, I'm</p>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-3 animate-slide-up" style="animation-delay: 0.15s;">
+                        <span class="text-primary-600 dark:text-primary-400">Karthika</span>
+                    </h1>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-5 animate-slide-up" style="animation-delay: 0.25s;">
+                        Full Stack Java Developer
+                    </h2>
+
+                    <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-7 animate-slide-up leading-relaxed" style="animation-delay: 0.35s;">
+                        I build responsive, production-ready web applications with <strong class="text-gray-800 dark:text-gray-100">Java</strong>,
+                        <strong class="text-gray-800 dark:text-gray-100">Spring Boot</strong>, <strong class="text-gray-800 dark:text-gray-100">REST APIs</strong>,
+                        and modern frontend technologies like <strong class="text-gray-800 dark:text-gray-100">React</strong>.
+                        Focused on clean architecture, reliable APIs, and polished UI/UX.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start animate-slide-up" style="animation-delay: 0.45s;">
+                        <a href="#projects" class="btn-primary inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            <span>View Projects</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </a>
+                        <a href="#contact" class="btn-secondary inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold border-2 border-primary-600 dark:border-primary-400 text-primary-600 dark:text-primary-400 hover:bg-primary-600 dark:hover:bg-primary-500 hover:text-white transition-all duration-300">
+                            <span>Contact Me</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 8a2 2 0 01-2 2H7l-4 4V6a2 2 0 012-2h14a2 2 0 012 2v2z"></path></svg>
+                        </a>
+                        <a href="https://github.com/Kart0610/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold bg-gray-900 text-white hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-300 shadow hover:shadow-lg">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/karthika-dinesh-247a76344" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold bg-primary-50 text-primary-700 hover:bg-primary-100 dark:bg-primary-900/40 dark:text-primary-200 dark:hover:bg-primary-900/60 transition-all duration-300 shadow hover:shadow-lg border border-primary-200/60 dark:border-primary-800/60">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Highlight Card -->
+                <div class="lg:col-span-5">
+                    <div class="hero-card bg-white/80 dark:bg-gray-800/60 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-2xl p-6 sm:p-8 shadow-xl">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-200 mb-5 mx-auto lg:mx-0">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 10-8 0v4a4 4 0 108 0V7zM12 14v7m-7 0h14"></path></svg>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2 text-center lg:text-left">Placement-ready fresher portfolio</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-5 text-center lg:text-left">
+                            Strong foundation in backend development, API design, and responsive frontend development.
+                            Comfortable with Git workflows and deploying applications on Render/Netlify.
+                        </p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="stat-mini rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-900/30">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Projects</p>
+                                <p class="text-2xl font-bold text-gray-900 dark:text-white">3+</p>
+                            </div>
+                            <div class="stat-mini rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-900/30">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Tech Stack</p>
+                                <p class="text-2xl font-bold text-gray-900 dark:text-white">10+</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,16 +199,36 @@
             <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">Get to know me better</p>
             
             <div class="max-w-4xl mx-auto">
-                <div class="about-content space-y-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-                    <p>
-                        I am a <strong class="text-gray-800 dark:text-gray-100">Full Stack Java Developer</strong> with a deliberate transition from Chemistry to software development. I completed my <strong class="text-gray-800 dark:text-gray-100">B.Sc in Chemistry</strong> from SDNB Vaishnav College for Women, Chennai in 2024. After graduation, driven by a passion for building web applications and solving real-world problems, I transitioned into technology and completed the <strong class="text-gray-800 dark:text-gray-100">Full Stack Java Development course at GUVI</strong> (IIT-Madras incubated EdTech platform) in 2025. My chemistry background sharpened my <strong class="text-gray-800 dark:text-gray-100">analytical thinking and problem-solving skills</strong>&mdash;qualities I now apply to designing robust, scalable web applications.
-                    </p>
-                    <p>
-                        During the course, I gained hands-on experience in <strong class="text-gray-800 dark:text-gray-100">Java, Spring Boot, HTML, CSS, JavaScript, Tailwind CSS, MySQL, PostgreSQL, Git, and REST APIs</strong>. I built real-world projects including a <strong class="text-gray-800 dark:text-gray-100">Movie Ticket Booking System</strong>, <strong class="text-gray-800 dark:text-gray-100">Real Estate Listing Platform</strong>, and <strong class="text-gray-800 dark:text-gray-100">Smart-Spend Expense Tracker</strong>&mdash;each demonstrating my ability to deliver end-to-end solutions from concept to deployment.
-                    </p>
-                    <p>
-                        I am passionate about building web applications that make a difference. My structured, analytical approach helps me break down complex requirements and write clean, maintainable code. I am confident in my ability to contribute to a team, learn quickly, and deliver quality software. I am eager to bring my technical skills and problem-solving mindset to a growth-oriented organization.
-                    </p>
+                <div class="about-content text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                    <div class="bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 sm:p-8 shadow-lg">
+                        <p class="text-sm font-semibold tracking-wide text-primary-700 dark:text-primary-300 mb-2">CAREER OBJECTIVE</p>
+                        <p class="text-gray-700 dark:text-gray-200 text-lg sm:text-xl leading-relaxed">
+                            Placement-oriented <strong class="text-gray-900 dark:text-white">Full Stack Java Developer</strong> seeking an entry-level role to build reliable,
+                            scalable web applications. Skilled in <strong class="text-gray-900 dark:text-white">Java</strong>, <strong class="text-gray-900 dark:text-white">Spring Boot</strong>,
+                            <strong class="text-gray-900 dark:text-white">REST APIs</strong>, <strong class="text-gray-900 dark:text-white">MySQL</strong>, <strong class="text-gray-900 dark:text-white">PostgreSQL</strong>,
+                            and <strong class="text-gray-900 dark:text-white">React</strong> with strong understanding of frontend + backend development, clean architecture, and deployment.
+                        </p>
+                        <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                            <div class="rounded-xl border border-gray-200 dark:border-gray-700 p-5 bg-white/70 dark:bg-gray-800/60">
+                                <p class="font-semibold text-gray-900 dark:text-white mb-2">Backend Strengths</p>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Spring Boot, RESTful API design, validation & error handling</li>
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Hibernate/JDBC, service-layer architecture, CRUD operations</li>
+                                </ul>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 dark:border-gray-700 p-5 bg-white/70 dark:bg-gray-800/60">
+                                <p class="font-semibold text-gray-900 dark:text-white mb-2">Frontend Strengths</p>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> React, JavaScript, responsive UI with Tailwind/Bootstrap</li>
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Accessibility-first components and polished UX interactions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-gray-600 dark:text-gray-300">
+                            I transitioned into software development through intensive training and project-based learning, and I enjoy turning requirements into clean,
+                            maintainable code with measurable user value.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,29 +243,37 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Project 1: Movie Ticket Booking System -->
-                <article class="project-card group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <article class="project-card group bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                     <div class="h-48 bg-gradient-to-br from-primary-500 to-primary-700 dark:from-primary-600 dark:to-primary-800 flex items-center justify-center">
                         <span class="text-6xl">🎬</span>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 sm:p-7">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Movie Ticket Booking System</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            A full-stack web application for booking movie tickets online. Users can browse movies, select showtimes, 
-                            choose seats, and complete payments. Includes admin panel for managing movies and screenings.
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                            End-to-end ticket booking platform with secure authentication, smooth seat selection, and a clean checkout flow.
+                            Designed with a REST API backend and a responsive UI to deliver a real-world booking experience.
                         </p>
+                        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30 p-4 mb-4">
+                            <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">Feature Highlights</p>
+                            <ul class="space-y-1 text-gray-600 dark:text-gray-300 text-sm">
+                                <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">•</span> Movie browsing, showtime selection, and seat booking</li>
+                                <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">•</span> Admin management for movies and screenings</li>
+                                <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">•</span> RESTful APIs with database integration</li>
+                            </ul>
+                        </div>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">Java</span>
                             <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">Spring Boot</span>
                             <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">MySQL</span>
                             <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">React</span>
                         </div>
-                        <div class="flex gap-4">
-                            <a href="https://github.com/Kart0610/movieticket" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://github.com/Kart0610/movieticket" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-primary-700 dark:text-primary-200 bg-primary-50 dark:bg-primary-900/40 hover:bg-primary-100 dark:hover:bg-primary-900/60 transition">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                 GitHub
                             </a>
-                            <a href="https://movieticket-1-lzqj.onrender.com/" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="https://movieticket-1-lzqj.onrender.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 transition shadow hover:shadow-md">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h7v7m0-7L10 14m-4 7h11a2 2 0 002-2V8"></path></svg>
                                 Live Demo
                             </a>
                         </div>
@@ -212,29 +281,37 @@
                 </article>
 
                 <!-- Project 2: Real Estate Listing Platform -->
-                <article class="project-card group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <article class="project-card group bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                     <div class="h-48 bg-gradient-to-br from-emerald-500 to-emerald-700 dark:from-emerald-600 dark:to-emerald-800 flex items-center justify-center">
                         <span class="text-6xl">🏠</span>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 sm:p-7">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Real Estate Listing Platform</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            A comprehensive platform for listing and searching real estate properties. Features include property search with filters, 
-                            image galleries, agent profiles, and inquiry management. Built with RESTful API architecture.
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                            A property discovery platform that helps users explore listings efficiently with filter-based search and structured property details.
+                            Built on REST APIs with a clean data model to support scalable listing and inquiry workflows.
                         </p>
+                        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30 p-4 mb-4">
+                            <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">Feature Highlights</p>
+                            <ul class="space-y-1 text-gray-600 dark:text-gray-300 text-sm">
+                                <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">•</span> Search & filters for location, budget, and property type</li>
+                                <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">•</span> Property detail pages with gallery-ready layout</li>
+                                <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">•</span> Inquiry workflow supported via REST APIs</li>
+                            </ul>
+                        </div>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full">Java</span>
                             <span class="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full">Spring Boot</span>
                             <span class="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full">PostgreSQL</span>
                             <span class="px-3 py-1 text-sm bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full">Tailwind CSS</span>
                         </div>
-                        <div class="flex gap-4">
-                            <a href="https://github.com/Kart0610/realnest" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://github.com/Kart0610/realnest" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-primary-700 dark:text-primary-200 bg-primary-50 dark:bg-primary-900/40 hover:bg-primary-100 dark:hover:bg-primary-900/60 transition">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                 GitHub
                             </a>
-                            <a href="https://realestate-project-9l6u.onrender.com/" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="https://realestate-project-9l6u.onrender.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 transition shadow hover:shadow-md">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h7v7m0-7L10 14m-4 7h11a2 2 0 002-2V8"></path></svg>
                                 Live Demo
                             </a>
                         </div>
@@ -242,29 +319,37 @@
                 </article>
 
                 <!-- Project 3: Smart-Spend Expense Tracker -->
-                <article class="project-card group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <article class="project-card group bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                     <div class="h-48 bg-gradient-to-br from-amber-500 to-amber-700 dark:from-amber-600 dark:to-amber-800 flex items-center justify-center">
                         <span class="text-6xl">💰</span>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 sm:p-7">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Smart-Spend Expense Tracker</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            An intuitive expense tracking application that helps users manage their finances. Features include 
-                            categorized spending, budget limits, visual analytics with charts, and export functionality for reports.
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                            Personal finance tracker designed to help users record expenses, categorize spending, and gain clarity through summaries.
+                            Built with clean CRUD flows and a responsive interface for everyday use.
                         </p>
+                        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30 p-4 mb-4">
+                            <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">Feature Highlights</p>
+                            <ul class="space-y-1 text-gray-600 dark:text-gray-300 text-sm">
+                                <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">•</span> Categorized expenses with flexible CRUD operations</li>
+                                <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">•</span> Budget-friendly summaries and insights</li>
+                                <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">•</span> Backend + database integration for persistence</li>
+                            </ul>
+                        </div>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 text-sm bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full">Java</span>
                             <span class="px-3 py-1 text-sm bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full">Spring Boot</span>
                             <span class="px-3 py-1 text-sm bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full">MySQL</span>
                             <span class="px-3 py-1 text-sm bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full">JavaScript</span>
                         </div>
-                        <div class="flex gap-4">
-                            <a href="https://github.com/Kart0610/smartspenddb" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://github.com/Kart0610/smartspenddb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-primary-700 dark:text-primary-200 bg-primary-50 dark:bg-primary-900/40 hover:bg-primary-100 dark:hover:bg-primary-900/60 transition">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                 GitHub
                             </a>
-                            <a href="https://smartspenddb-4.onrender.com/" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline flex items-center gap-1">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="https://smartspenddb-4.onrender.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 transition shadow hover:shadow-md">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h7v7m0-7L10 14m-4 7h11a2 2 0 002-2V8"></path></svg>
                                 Live Demo
                             </a>
                         </div>
@@ -278,48 +363,243 @@
     <section id="skills" class="py-20 bg-white dark:bg-gray-800/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Skills</h2>
-            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">Technologies I work with</p>
+            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">A structured overview of my technical toolkit</p>
             
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">☕</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">Java</span>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Frontend -->
+                <div class="skill-category-card bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center text-primary-700 dark:text-primary-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L8 21h8l-1.75-4M3 13h18M5 6h14a2 2 0 012 2v5H3V8a2 2 0 012-2z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white">Frontend Skills</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">UI development & responsiveness</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">HTML5</span>
+                        <span class="skill-badge">CSS3</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">React.js</span>
+                        <span class="skill-badge">Tailwind CSS</span>
+                        <span class="skill-badge">Bootstrap</span>
+                    </div>
                 </div>
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">🍃</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">Spring Boot</span>
+
+                <!-- Backend -->
+                <div class="skill-category-card bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center text-primary-700 dark:text-primary-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M4 5h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V7a2 2 0 012-2z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white">Backend Skills</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">APIs, architecture & business logic</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">Spring Boot</span>
+                        <span class="skill-badge">REST APIs</span>
+                        <span class="skill-badge">Hibernate</span>
+                        <span class="skill-badge">JDBC</span>
+                    </div>
                 </div>
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">📄</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">HTML</span>
+
+                <!-- Database -->
+                <div class="skill-category-card bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center text-primary-700 dark:text-primary-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7c0-1.105 3.582-2 8-2s8 .895 8 2-3.582 2-8 2-8-.895-8-2zm0 5c0 1.105 3.582 2 8 2s8-.895 8-2m-16 5c0 1.105 3.582 2 8 2s8-.895 8-2"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white">Database</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Relational databases & queries</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                    </div>
                 </div>
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">🎨</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">CSS</span>
+
+                <!-- Tools -->
+                <div class="skill-category-card bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center text-primary-700 dark:text-primary-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7 6.3a1 1 0 010 1.4L12.4 10l2.3 2.3a1 1 0 01-1.4 1.4L11 11.4l-2.3 2.3a1 1 0 01-1.4-1.4L9.6 10 7.3 7.7a1 1 0 011.4-1.4L11 8.6l2.3-2.3a1 1 0 011.4 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white">Tools & Platforms</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Workflow & deployment</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">GitHub</span>
+                        <span class="skill-badge">Postman</span>
+                        <span class="skill-badge">VS Code</span>
+                        <span class="skill-badge">IntelliJ IDEA</span>
+                        <span class="skill-badge">Render</span>
+                        <span class="skill-badge">Netlify</span>
+                    </div>
                 </div>
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">⚡</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">JavaScript</span>
+
+                <!-- Concepts -->
+                <div class="skill-category-card bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center text-primary-700 dark:text-primary-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 10v6m8-8h-4M8 12H4"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white">Concepts</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Engineering fundamentals</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">OOPs</span>
+                        <span class="skill-badge">MVC Architecture</span>
+                        <span class="skill-badge">CRUD Operations</span>
+                        <span class="skill-badge">Responsive Design</span>
+                    </div>
                 </div>
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">🌊</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">Tailwind CSS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TRAINING / INTERNSHIP SECTION ==================== -->
+    <section id="training" class="py-20 bg-gray-50 dark:bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Training / Internship</h2>
+            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">Hands-on full stack development experience</p>
+
+            <div class="max-w-5xl mx-auto">
+                <div class="training-card bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <div class="p-6 sm:p-10">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Full Stack Java Development Training</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mt-1">GUVI (IIT-Madras incubated) • 2025</p>
+                            </div>
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 dark:bg-primary-900/40 text-primary-700 dark:text-primary-200 border border-primary-200/60 dark:border-primary-800/60 font-semibold">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"></path></svg>
+                                Project-based learning
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="rounded-2xl p-6 bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700">
+                                <p class="font-semibold text-gray-900 dark:text-white mb-3">What I worked on</p>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Built responsive full stack web applications</li>
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Worked with Spring Boot and REST APIs</li>
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Integrated MySQL and PostgreSQL databases</li>
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Developed frontend interfaces using HTML, CSS, JavaScript, and React</li>
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Practiced CRUD operations and MVC architecture</li>
+                                </ul>
+                            </div>
+                            <div class="rounded-2xl p-6 bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700">
+                                <p class="font-semibold text-gray-900 dark:text-white mb-3">Strengths built</p>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> API-first development & clean layering (controller/service/repo)</li>
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Debugging, testing mindset, and code readability</li>
+                                    <li class="flex gap-2"><span class="text-primary-600 dark:text-primary-400">✓</span> Git-based workflows and deployment readiness</li>
+                                </ul>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">Java</span>
+                                    <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">Spring Boot</span>
+                                    <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">REST APIs</span>
+                                    <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">React</span>
+                                    <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">MySQL</span>
+                                    <span class="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">🐬</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">MySQL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS SECTION ==================== -->
+    <section id="certifications" class="py-20 bg-white dark:bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Certifications</h2>
+            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-10">Continuous learning and verified milestones</p>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center justify-between gap-4 mb-5">
+                    <p class="text-gray-600 dark:text-gray-300">Swipe/scroll or use arrows to navigate.</p>
+                    <div class="flex gap-2">
+                        <button type="button" class="cert-nav-btn" data-cert-nav="prev" aria-label="Previous certificate">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button type="button" class="cert-nav-btn" data-cert-nav="next" aria-label="Next certificate">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
                 </div>
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">🐘</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">PostgreSQL</span>
+
+                <div class="cert-carousel border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30 rounded-2xl p-4 sm:p-6 shadow-lg">
+                    <div class="cert-track" id="cert-track" tabindex="0" aria-label="Certification carousel">
+                        <article class="cert-card">
+                            <p class="cert-title">Full Stack Java Development</p>
+                            <p class="cert-org">GUVI</p>
+                            <p class="cert-year">2025</p>
+                        </article>
+                        <article class="cert-card">
+                            <p class="cert-title">Java Programming Certification</p>
+                            <p class="cert-org">Online Certification</p>
+                            <p class="cert-year">2025</p>
+                        </article>
+                        <article class="cert-card">
+                            <p class="cert-title">SQL and Database Certification</p>
+                            <p class="cert-org">Online Certification</p>
+                            <p class="cert-year">2025</p>
+                        </article>
+                        <article class="cert-card">
+                            <p class="cert-title">Spring Boot Certification</p>
+                            <p class="cert-org">Online Certification</p>
+                            <p class="cert-year">2025</p>
+                        </article>
+                        <article class="cert-card">
+                            <p class="cert-title">JavaScript Certification</p>
+                            <p class="cert-org">Online Certification</p>
+                            <p class="cert-year">2025</p>
+                        </article>
+                    </div>
                 </div>
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">📦</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">Git</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS / STATS SECTION ==================== -->
+    <section id="achievements" class="py-20 bg-gray-50 dark:bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Achievements</h2>
+            <p class="section-subtitle text-center text-primary-600 dark:text-primary-400 font-medium mb-16">Quick highlights that reflect my readiness</p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="stat-card bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Projects Completed</p>
+                    <p class="text-4xl font-extrabold text-gray-900 dark:text-white"><span class="counter" data-target="3">0</span>+</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">End-to-end full stack builds</p>
                 </div>
-                <div class="skill-card flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                    <span class="text-4xl mb-2">⚛️</span>
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">REST APIs</span>
+                <div class="stat-card bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Technologies Learned</p>
+                    <p class="text-4xl font-extrabold text-gray-900 dark:text-white"><span class="counter" data-target="10">0</span>+</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Modern tools & frameworks</p>
+                </div>
+                <div class="stat-card bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Role Focus</p>
+                    <p class="text-4xl font-extrabold text-gray-900 dark:text-white">Full Stack</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Frontend + Backend development</p>
+                </div>
+                <div class="stat-card bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">UI Quality</p>
+                    <p class="text-4xl font-extrabold text-gray-900 dark:text-white">Responsive</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Mobile-first web applications</p>
                 </div>
             </div>
         </div>
@@ -378,38 +658,41 @@
                 
                 <!-- Contact Info -->
                 <div class="space-y-6">
-                    <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <div class="flex items-center gap-4 p-5 bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm hover:shadow-md transition">
                         <span class="text-2xl">📧</span>
                         <div>
                             <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
                             <a href="mailto:karthikat0610@gmail.com" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">karthikat0610@gmail.com</a>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <div class="flex items-center gap-4 p-5 bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm hover:shadow-md transition">
                         <span class="text-2xl">📱</span>
                         <div>
                             <p class="text-sm text-gray-500 dark:text-gray-400">Phone</p>
                             <a href="tel:+916382118039" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">+916382118039</a>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <div class="flex items-center gap-4 p-5 bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm hover:shadow-md transition">
                         <span class="text-2xl">💼</span>
                         <div>
                             <p class="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
-                            <a href="https://www.linkedin.com/in/karthika-dinesh-247a76344" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">https://www.linkedin.com/in/karthika-dinesh-247a76344</a>
+                            <a href="https://www.linkedin.com/in/karthika-dinesh-247a76344" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">linkedin.com/in/karthika-dinesh-247a76344</a>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <div class="flex items-center gap-4 p-5 bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm hover:shadow-md transition">
                         <span class="text-2xl">🐙</span>
                         <div>
                             <p class="text-sm text-gray-500 dark:text-gray-400">GitHub</p>
-                            <a href="https://github.com/Kart0610/" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">https://github.com/Kart0610/</a>
-                            
+                            <a href="https://github.com/Kart0610/" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 hover:underline">github.com/Kart0610</a>
+                        </div>
                     </div>
                 </div>
-                </div>
                 <!-- Contact Form -->
-                <form id="contact-form" class="space-y-6 bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700">
+                <form id="contact-form" class="space-y-5 bg-gray-50 dark:bg-gray-900/30 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg">
+                    <div class="mb-2">
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">Send a message</p>
+                        <p class="text-gray-600 dark:text-gray-300">I usually respond within 24–48 hours.</p>
+                    </div>
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
                         <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition" placeholder="Your Name">
@@ -438,15 +721,15 @@
     <footer class="bg-gray-900 dark:bg-black text-gray-300 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-center md:text-left">© <span id="current-year"></span> Your Name. All rights reserved.</p>
+                <p class="text-center md:text-left">© <span id="current-year"></span> Karthika. All rights reserved.</p>
                 <div class="flex gap-6">
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors" aria-label="GitHub">
+                    <a href="https://github.com/Kart0610/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors" aria-label="GitHub">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/karthika-dinesh-247a76344" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors" aria-label="LinkedIn">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     </a>
-                    <a href="mailto:your.email@example.com" class="hover:text-primary-400 transition-colors" aria-label="Email">
+                    <a href="mailto:karthikat0610@gmail.com" class="hover:text-primary-400 transition-colors" aria-label="Email">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </a>
                 </div>
